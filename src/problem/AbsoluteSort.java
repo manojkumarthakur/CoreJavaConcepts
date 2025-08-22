@@ -24,7 +24,9 @@ public class AbsoluteSort {
 
     public static void main(String[] args) {
         int[] arr = {2, -7, -2, -2, 0};
+        Arrays.sort(arr);
+        System.out.println("Normal sort: " + Arrays.toString(arr));
         absSort(arr);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("Abs sort: " + Arrays.toString(arr));
     }
 }
