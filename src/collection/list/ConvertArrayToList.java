@@ -21,7 +21,8 @@ public class ConvertArrayToList {
         }
         System.out.println("Printing List: "+list);
 
-        String[] arr = list.toArray(new String[list.size()]);
+//        String[] arr = list.toArray(new String[list.size()]);
+        String[] arr = (String[]) list.toArray();
         System.out.println("Printing Array: "+Arrays.toString(arr));
         System.out.println("Printing List: "+list);
     }
