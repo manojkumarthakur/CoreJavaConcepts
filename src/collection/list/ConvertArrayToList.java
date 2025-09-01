@@ -10,7 +10,7 @@ public class ConvertArrayToList {
         String[] array={"Java","Python","PHP","C++"};
         System.out.println("Printing Array: "+ Arrays.toString(array));
 
-        // USing Arrays.asList()
+        // Converting Array to List by USing Arrays.asList()
         List<String> ll = Arrays.asList(array);
         System.out.println(ll);
 
@@ -21,8 +21,8 @@ public class ConvertArrayToList {
         }
         System.out.println("Printing List: "+list);
 
-//        String[] arr = list.toArray(new String[list.size()]);
-        String[] arr = (String[]) list.toArray();
+        //Converting ArrayList to Array
+        String[] arr = list.toArray(new String[list.size()]);
         System.out.println("Printing Array: "+Arrays.toString(arr));
         System.out.println("Printing List: "+list);
     }

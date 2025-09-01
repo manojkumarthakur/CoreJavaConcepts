@@ -1,6 +1,7 @@
 package collection.list.arrayList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListAdd {
     public static void main(String[] args) {
@@ -34,5 +35,9 @@ public class ArrayListAdd {
         al.addAll(1, al2);
 
         System.out.println(al);
+
+        // make a new list using subList()
+        List<String> subList = al.subList(1, 3);
+        System.out.println(subList);
     }
 }
