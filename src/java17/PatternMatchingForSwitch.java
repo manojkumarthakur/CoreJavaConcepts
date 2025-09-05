@@ -32,12 +32,13 @@ public class PatternMatchingForSwitch {
         return "Unknown type";
     }
     static String checkTypeJDK17(Object obj){
-        String result = switch (obj) {
-            case String s -> "String: " + s;
-            case Integer i -> "Integer: " + i;
-            case Double d -> "Double: " + d;
-            default -> "Unknown type";
-        };
-        return result;
+//        String result = switch (obj) {
+//            case String s -> "String: " + s;
+//            case Integer i -> "Integer: " + i;
+//            case Double d -> "Double: " + d;
+//            default -> "Unknown type";
+//        };
+//        return result;
+        return "";
     }
 }
