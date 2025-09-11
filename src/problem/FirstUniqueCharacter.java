@@ -1,6 +1,7 @@
 package problem;
 
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -44,7 +45,19 @@ public class FirstUniqueCharacter {
         Optional<Character> unique3 = findFirstUniqueCharacter(s3);
         unique3.ifPresentOrElse(
                 c -> System.out.println("First unique character in \"" + s3 + "\": " + c),
-                () -> System.out.println("No unique character found in \"" + s3 + "\"")
-        ); // Output: No unique character found in "aabb"
+                () -> System.out.println("No unique character found in \"" + s3 + "\"")); // Output: No unique character found in "aabb"
+
+        findFirstUniqueCharacterSelf(s1);
     }
+
+    public static Character findFirstUniqueCharacterSelf(String str) {
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
+        for(Character ch: str.toCharArray()){
+            map.computeIfAbsent(ch, k -> k+1);
+        }
+        System.out.println(map);
+        map.entrySet().stream().filter(n -> n.getValue()==1).forEach(System.out::println);
+        return 'C';
+    }
+
 }

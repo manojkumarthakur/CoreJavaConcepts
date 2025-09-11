@@ -30,7 +30,7 @@ public class StreamAddExample {
 
         System.out.println("********");
         //
-        List<Integer> list = Arrays.asList(2,3,4,7,9,1);
+        List<Integer> list = Arrays.asList(2,3,4,7,5,9,1);
         list.stream()
                 .filter(a -> a%2==1)
                 .sorted()
