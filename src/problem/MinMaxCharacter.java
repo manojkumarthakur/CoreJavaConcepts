@@ -8,11 +8,12 @@ public class MinMaxCharacter {
     public static String maxMinCharacter(String str) {
         LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
         for(char c: str.toCharArray()) {
-            if(map.containsKey(c)) {
-                map.put(c, map.get(c) + 1);
-            } else {
-                map.put(c, 1);
-            }
+//            if(map.containsKey(c)) {
+//                map.put(c, map.get(c) + 1);
+//            } else {
+//                map.put(c, 1);
+//            }
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
         char maxChar = ' ';

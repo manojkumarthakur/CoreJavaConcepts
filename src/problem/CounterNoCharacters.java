@@ -9,7 +9,7 @@ public class CounterNoCharacters {
     public static String getStringCounter(String str) {
         Map<Character, Integer> map = new LinkedHashMap<>();
         for (Character ch : str.toCharArray()) {
-            map.computeIfAbsent(ch, k-> k+1);
+            map.computeIfAbsent(ch, k-> k+1); //Need to check
         }
         System.out.println(map);
         StringBuilder sb = new StringBuilder();
