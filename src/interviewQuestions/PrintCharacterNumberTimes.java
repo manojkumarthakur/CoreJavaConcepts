@@ -1,5 +1,8 @@
 package interviewQuestions;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 // String s = "x2y5b1c7"
 // print xxyyyyybccccccc
 public class PrintCharacterNumberTimes {
@@ -23,7 +26,23 @@ public class PrintCharacterNumberTimes {
         return sb.toString();
     }
     public static void main(String[] args) {
-        String s = "xyz";
-        System.out.println(formatString(s));
+        String s = "My name is varun";
+//        System.out.println(formatString(s));
+        printCharCount(s);
+    }
+
+    public static void printCharCount(String str) {
+
+        str = str.toLowerCase();
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        for(char c: str.toCharArray()) {
+            if (c == ' ')
+                continue;
+            map.put(c, map.getOrDefault(c, 0)+1);
+        }
+
+        for(Map.Entry<Character, Integer> e: map.entrySet()) {
+            System.out.println(e.getKey() + " - " + e.getValue());
+        }
     }
 }
